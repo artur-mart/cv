@@ -1,0 +1,404 @@
+.container {
+    margin: 24px auto;
+    padding: 72px 0;
+    width: 920px;
+    max-width: 90%;
+    background: rgb(45, 55, 57);
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(30%, rgba(45, 55, 57, 1)),
+        color-stop(30%, rgba(255, 255, 255, 1))
+    );
+    background: -o-linear-gradient(left, rgba(45, 55, 57, 1) 30%, rgba(255, 255, 255, 1) 30%);
+    background: linear-gradient(90deg, rgba(45, 55, 57, 1) 30%, rgba(255, 255, 255, 1) 30%);
+}
+
+.info {
+    &-block {
+        padding: 24px 36px;
+    }
+    &-empty {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        width: 30%;
+    }
+    &-content {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+    &-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        background-color: $colorBackGrey;
+        overflow: hidden;
+        & > img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+    &-title {
+        font: 45px Montserrat-Bold, sans-serif;
+        color: $colorBackGrey;
+        padding-bottom: 15px;
+    }
+    &-subtitle {
+        font: 28px Montserrat-Bold, sans-serif;
+        color: $colorTextCyan;
+        padding-bottom: 15px;
+    }
+}
+.contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    &-item {
+        text-decoration: none;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+    }
+    &-link {
+        display: inline-block;
+        font: 14px/36px Montserrat-Bold, sans-serif;
+        text-decoration: none;
+        color: $colorTextGrey;
+        & > span {
+            word-break: break-all;
+        }
+    }
+    &-phon {
+        display: inline-block;
+        text-align: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: $colorTextCyan;
+        margin-right: 4px;
+        flex: 0 0 36px;
+
+        & > i {
+            color: $colorBackWhite;
+            font-size: 18px;
+            line-height: 36px;
+        }
+    }
+}
+.phon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $colorTextCyan;
+}
+
+.section {
+    margin-bottom: 12px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    &-block {
+        padding: 24px 36px;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            background-color: $colorBorder;
+            height: 1px;
+            left: 36px;
+            right: 36px;
+            top: 0;
+            position: absolute;
+        }
+    }
+    &-info {
+        font: 14px Montserrat-Regular, sans-serif;
+        color: $colorTextDark;
+        text-align: justify;
+        text-indent: 16px;
+    }
+    &-title {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        width: 30%;
+        text-align: right;
+        font: 28px Montserrat-Bold, sans-serif;
+        color: $colorTextCyan;
+    }
+    &-content {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        color: $colorTextGrey;
+    }
+}
+
+.inner {
+    margin-bottom: 12px;
+
+    &-title-block {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+    &-title {
+        font: 18px Montserrat-SemiBold, sans-serif;
+        color: $colorTextGrey;
+    }
+    &-subtitle {
+        font: 16px Montserrat-SemiBoldItalic, sans-serif;
+        color: $colorTextGrey;
+    }
+    &-year {
+        font: 16px Montserrat-SemiBold, sans-serif;
+        color: $colorTextCyan;
+    }
+    &-info {
+        font: 14px Montserrat-Regular, sans-serif;
+        color: $colorTextDark;
+        text-align: justify;
+    }
+}
+
+.skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -12px;
+
+    &-title {
+        font: 16px Montserrat-SemiBoldItalic, sans-serif;
+        color: $colorTextGrey;
+    }
+    &-list {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        padding: 12px;
+    }
+    &-item {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    &-range {
+        position: relative;
+        width: 100%;
+        height: 10px;
+        background-color: $colorBorder;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            height: 10px;
+            top: 0;
+            left: 0;
+            background-color: $colorTextCyan;
+        }
+
+        &-html:before {
+            width: 80%;
+        }
+        &-css:before {
+            width: 80%;
+        }
+        &-js:before {
+            width: 50%;
+        }
+        &-jq:before {
+            width: 60%;
+        }
+        &-ang:before {
+            width: 50%;
+        }
+    }
+    &-info {
+        font: 14px Montserrat-Regular, sans-serif;
+        color: $colorTextDark;
+        text-align: justify;
+        text-indent: 16px;
+    }
+}
+
+.interests {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    &-block {
+        width: 60px;
+        height: 60px;
+        border-radius: 20%;
+        text-align: center;
+        background-color: $colorTextCyan;
+
+        & > i {
+            color: $colorBackWhite;
+            font-size: 24px;
+            line-height: 60px;
+        }
+    }
+}
+
+.portfolio {
+    &-list {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &-item {
+        margin-bottom: 12px;
+        font: 16px Montserrat-SemiBoldItalic, sans-serif;
+        color: $colorTextGrey;
+        text-decoration: none;
+    }
+    &-link {
+        display: block;
+        color: $colorTextGrey;
+        text-decoration: none;
+        margin-bottom: 12px;
+        font: 18px Montserrat-SemiBold, sans-serif;
+        &:hover {
+            color: $colorTextCyan;
+        }
+    }
+    &-icon {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        background-color: $colorTextCyan;
+        text-align: center;
+        & > i {
+            color: $colorBackWhite;
+            font-size: 18px;
+            line-height: 32px;
+        }
+    }
+}
+@media only screen and (max-width: 1030px) {
+    .container {
+        background: $colorBackWhite;
+        padding-top: 32px;  
+    }
+    .section {
+        display: block;
+        text-align: center;
+        margin-bottom: 24px;
+        &-content {
+            text-align: left !important;
+        }
+        &-title {
+            width: 100%;
+            margin-bottom: 12px;
+            font: 20px Montserrat-Bold, sans-serif;
+        }
+        &-block {
+            text-align: center;
+            padding: 1px 36px;
+            &:before {
+                width: 0;
+            }
+        }
+    }
+    .info {
+        &-block {
+            text-align: -webkit-center;
+        }
+        &-empty {
+            width: 100%;
+        }
+    }
+    .inner-title-block {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        & > div {
+            flex-grow: 1;
+            width: 100%;
+            text-align: left;
+        }
+    }
+    .interests {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .container {
+        padding-top: 16px;  
+    }
+    .section-block {
+        padding: 0px 16px;
+    }
+    .contacts {
+        display: block;
+        &-item {
+            margin-bottom: 12px;
+        }
+        &-link {
+            word-break: break-word;
+        }
+    }
+    .info {
+        &-block {
+            padding: 16px;
+        }
+        &-title {
+            font: 26px Montserrat-Bold, sans-serif;
+        }
+    }
+    .skills {
+        flex-wrap: wrap;
+        &-list {
+            flex-basis: 100%;
+            text-align: left;
+        }
+    }
+    .interests {
+        flex-wrap: wrap;
+        &-block {
+            width: 42px;
+            height: 42px;
+            margin: 4px;
+            & > i {
+                line-height: 42px;
+                font-size: 20px;
+            }
+        }
+    }
+    .portfolio-list {
+        flex-wrap: wrap;
+    }
+}
+
+@media print {
+    body {
+        background: none;
+
+    }
+    .container {
+        margin: 0;
+        padding-top: 16px;
+    }
+}

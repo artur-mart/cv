@@ -1,0 +1,21 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: no-repeat center url(../img/background.jfif);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+html,
+body {
+    font: 16px Montserrat-Regular, sans-serif;
+}
+
